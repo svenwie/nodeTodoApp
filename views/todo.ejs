@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>Todo List</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <script
+  src="https://code.jquery.com/jquery-migrate-3.0.1.min.js"
+  integrity="sha256-F0O1TmEa4I8N24nY0bya59eP6svWcshqX1uzwaWC4F4="
+  crossorigin="anonymous"></script>
+  <script src="/public/assets/todo-list.js"></script>
+    <link href="/assets/styles.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <h1>My todo list</h1>
+    <div id="todo-table">
+      <form>
+        <input type="text" name="item" placeholder="Add new item..." required/>
+        <button type="submit">Add Item</button>
+      </form>
+      <ul>
+         <% for(var i=0; i < todos.length; i++){ %>
+           <li><%= todos[i].item %></li>
+         <% } %>
+      </ul>
+    </div>
+  </body>
+</html>
